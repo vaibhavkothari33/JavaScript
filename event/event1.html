@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listiner</title>
+</head>
+
+<body>
+    <div class="name">
+        <li><img class="img2" src="https://images.pexels.com/photos/18939401/pexels-photo-18939401/free-photo-of-cars-and-motorbikes-on-street-at-sunset-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            width="30%" height="30%"></li>
+        <li><img class="img3" src="https://images.pexels.com/photos/18939401/pexels-photo-18939401/free-photo-of-cars-and-motorbikes-on-street-at-sunset-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            width="30%" height="30%"></li>
+        <li><img class="img4" src="https://images.pexels.com/photos/18939401/pexels-photo-18939401/free-photo-of-cars-and-motorbikes-on-street-at-sunset-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            width="30%" height="30%"></li>
+        <li><img class="img5" src="https://images.pexels.com/photos/18939401/pexels-photo-18939401/free-photo-of-cars-and-motorbikes-on-street-at-sunset-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            width="30%" height="30%"></li>
+        <li><img class="img1" src="https://images.pexels.com/photos/18939401/pexels-photo-18939401/free-photo-of-cars-and-motorbikes-on-street-at-sunset-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            width="30%" height="30%"></li>
+    </div>
+</body>
+<script>
+    const name = document.querySelector(".name")
+    name.addEventListener("click",function(e){
+        // alert("You click on the image")
+        console.log(e.target.tagName);
+        console.log(e.target.className);
+        if(e.target.tagName === "IMG"){
+            let removeit = e.target.parentNode
+            removeit.remove()
+        }
+    })
+    // const images1 = document.querySelector(".img2")
+    // images1.addEventListener("double-click",function(){
+    //     alert("You click on the image")
+    // },false)
+</script>
+</html>

@@ -1,0 +1,1 @@
+// jab tume apna kaam turse ko dena hota hai tab api kam ayte hai

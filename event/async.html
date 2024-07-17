@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+
+<body>
+    <h1>Hello world</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function (){
+    //     console.log("Vaibhav");
+    // },2000)
+    const saymyname = () => {
+        console.log("Text changes");
+    }
+    setTimeout(saymyname, 2000)
+    // setTimeout(saymyname, 4000)
+    // setTimeout(saymyname, 6000)
+    const textme = ()=>{
+        document.querySelector("h1").innerHTML="Learing js for vaibhav"
+    }
+    const stopevery = setTimeout(textme,2000)
+
+   // this is useful when you scroll the website and see a random pop up
+//    login
+
+    const button = document.querySelector("#stop")
+    button.addEventListener("click",function(){
+       clearTimeout(stopevery)
+       console.log("Stopped");
+    })
+
+
+</script>
+
+</html>
